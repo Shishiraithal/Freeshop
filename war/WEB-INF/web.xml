@@ -3,7 +3,7 @@
 	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	id="WebApp_ID" version="2.5">
-	
+
 	<display-name>Freeshop</display-name>
 
 	<!--
@@ -17,17 +17,22 @@
 		<param-name>br.com.caelum.vraptor.packages</param-name>
 		<param-value>br.com.caelum.vraptor.gae</param-value>
 	</context-param>
-	
+
 	<context-param>
 		<param-name>br.com.caelum.vraptor.encoding</param-name>
 		<param-value>UTF-8</param-value>
 	</context-param>
-	
+
+	<context-param>
+		<param-name>javax.servlet.jsp.jstl.fmt.locale</param-name>
+		<param-value>pt_BR</param-value>
+	</context-param>
+
 	<context-param>
 		<param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
 		<param-value>messages</param-value>
 	</context-param>
-	
+
 	<listener>
 		<listener-class>freeshop.web.listener.EntityManagerFactoryLoaderListener</listener-class>
 	</listener>
@@ -60,14 +65,10 @@
 
 	<!-- Servlets -->
 	<!--
-	<servlet>
-		<servlet-name>greetServlet</servlet-name>
+		<servlet> <servlet-name>greetServlet</servlet-name>
 		<servlet-class>freeshop.server.GreetingServiceImpl</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>greetServlet</servlet-name>
-		<url-pattern>/freeshop/greet</url-pattern>
-	</servlet-mapping>
+		</servlet> <servlet-mapping> <servlet-name>greetServlet</servlet-name>
+		<url-pattern>/freeshop/greet</url-pattern> </servlet-mapping>
 	-->
 
 	<welcome-file-list>

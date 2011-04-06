@@ -1,9 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ page isELIgnored="false" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <br/><br/>
 </div>
 <div id="footer">
-	<p class="menu_footer"><a href="index.htm">INÍCIO</a> &nbsp;|&nbsp; <a href="promocao.htm">PROMOÇÃO</a> &nbsp;|&nbsp; <a href="produto.htm">PRODUTO</a> &nbsp;|&nbsp; <a href="shop/">COMPRE</a> &nbsp;|&nbsp; <a href="duvidas.htm">DÚVIDAS</a> &nbsp;|&nbsp; <a href="contato.htm">CONTATO</a></p>
-	<p>Todos os direitos reservados &copy; Refscall 2010</p>
+	<p class="menu_footer">
+	<a href="/shop/"><fmt:message key="app.menu.store" /></a> &nbsp;|&nbsp; 
+	<a href="/shop/cart"><fmt:message key="app.menu.cart" /></a> &nbsp;|&nbsp; 
+<c:forEach items="${MenuItems}" var="MenuItem" varStatus="st">
+	<a href="/page/${MenuItem.name}">${MenuItem.menuTitle}</a> &nbsp;|&nbsp; 
+</c:forEach>
+	</p>
+	<p><fmt:message key="app.copyright" /></p>
 </div>
 </div>
 <script type="text/javascript">

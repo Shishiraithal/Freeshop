@@ -5,14 +5,14 @@
 
 <jsp:include page="/WEB-INF/jsp/admin/inc/top.jsp" />
 
-<h2>Cadastro de Produtos</h2>
+<h2><fmt:message key="title.admin.products" /></h2>
 
-[ <a href="/admin/product">NOVO</a> ] <br/>
+[ <a href="/admin/product"><fmt:message key="lbl.new" /></a> ] <br/>
 
 <table>
-<tr><th>ID</th><th>Nome</th><th>Preço</th><th>Preço Antigo</th></tr>
+<tr><th><fmt:message key="lbl.id" /></th><th><fmt:message key="lbl.name" /></th><th><fmt:message key="lbl.price" /></th><th><fmt:message key="lbl.old.price" /></th><th><fmt:message key="lbl.quantity" /></th><th><fmt:message key="lbl.active" /></th><th><fmt:message key="lbl.group" /></th></tr>
 <c:forEach items="${list}" var="prod" varStatus="st">
-<tr><td>${prod.id}</td><td><a href="/admin/product/${prod.id}">${prod.name}</a></td><td>${prod.price}</td><td>${prod.oldPrice}</td></tr>
+<tr><td>${prod.id}</td><td><a href="/admin/product/${prod.id}">${prod.name}</a></td><td>${prod.price}</td><td>${prod.oldPrice}</td><td>${prod.quantity}</td><td>${prod.active}</td><td>${prod.group}</td></tr>
 </c:forEach>
 </table>
 

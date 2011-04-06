@@ -14,7 +14,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 
-import freeshop.gae.ShopGaeJpaDAO;
+import freeshop.dao.gae.ShopGaeJpaDAO;
 
 
 public class EntityManagerTransactionFilter implements Filter {

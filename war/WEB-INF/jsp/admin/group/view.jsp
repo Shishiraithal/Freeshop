@@ -5,10 +5,10 @@
 
 <jsp:include page="/WEB-INF/jsp/admin/inc/top.jsp" />
 
-<h2>Cadastro de Categorias de Produtos</h2>
+<h2><fmt:message key="title.admin.categories" /></h2>
 
- ID: ${group.id} <br/>
- Name: ${group.name} <br/> <br/>
- [ <a href="/admin/groups">lista</a> ] [ <a href="/admin/group">novo</a> ] [ <a href="/admin/group/${group.id}/edit">editar</a> ] [ <a href="/admin/group/${group.id}/delete">excluir</a> ] 
+ <fmt:message key="lbl.id" />: ${group.id} <br/>
+ <fmt:message key="lbl.name" />: ${group.name} <br/> <br/>
+ [ <a href="/admin/groups"><fmt:message key="lbl.list" /></a> ] [ <a href="/admin/group"><fmt:message key="lbl.new" /></a> ] [ <a href="/admin/group/${group.id}/edit"><fmt:message key="lbl.edit" /></a> ] [ <a href="/admin/group/${group.id}/delete"><fmt:message key="lbl.delete" /></a> ] 
 
 <jsp:include page="/WEB-INF/jsp/admin/inc/footer.jsp" />

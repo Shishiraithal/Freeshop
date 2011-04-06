@@ -5,15 +5,15 @@
 
 <jsp:include page="/WEB-INF/jsp/admin/inc/top.jsp" />
 
-<h2>Cadastro de Categorias de Produtos</h2>
+<h2><fmt:message key="title.admin.categories" /></h2>
 
 <form name="frmGroup" method="POST" action="/admin/group/save">
  <input type="hidden" name="group.id" value="${group.id}"/>
- ID: ${group.id} <br/>
- Name: <input type="text" name="group.name" value="${group.name}"/> <br/>
+ <fmt:message key="lbl.id" />: ${group.id} <br/>
+ <fmt:message key="lbl.name" />: <input type="text" name="group.name" value="${group.name}"/> <br/>
  <input type="submit" name="btnSave" value="Save"/> 
 </form>
  <br/>
- [ <a href="/admin/groups">lista</a> ] [ <a href="/admin/group">novo</a> ] [ editar ] [ <a href="/admin/group/${product.id}/delete">excluir</a> ]
+ [ <a href="/admin/groups"><fmt:message key="lbl.list" /></a> ] [ <a href="/admin/group"><fmt:message key="lbl.new" /></a> ] [ <fmt:message key="lbl.edit" /> ] [ <a href="/admin/group/${group.id}/delete"><fmt:message key="lbl.delete" /></a> ]
 
 <jsp:include page="/WEB-INF/jsp/admin/inc/footer.jsp" />

@@ -5,6 +5,6 @@
 
 <jsp:include page="/WEB-INF/jsp/admin/inc/top.jsp" />
 
-<h2>Administração da Loja</h2>
+<h2><fmt:message key="title.shop.admin" /></h2>
 
 <jsp:include page="/WEB-INF/jsp/admin/inc/footer.jsp" />

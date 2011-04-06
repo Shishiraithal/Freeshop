@@ -12,7 +12,19 @@
  Short name: ${product.shortName} <br/>
  Description: ${product.description} <br/>
  Price: ${product.price} <br/>
- Old Price: ${product.oldPrice} <br/> <br/>
+ Old Price: ${product.oldPrice} <br/> 
+ Quantity: ${product.quantity} <br/> 
+ Active: ${product.active} <br/> 
+ Group: ${product.group.name} <br/> 
+ Brand: ${product.brand} <br/> 
+ Size: ${product.size} <br/> 
+ Color: ${product.color} <br/> 
+ Author: ${product.author} <br/> 
+ ISBN: ${product.isbn} <br/> 
+ Weight: ${product.weight} <br/> 
+ Dimensions: ${product.dimensions} <br/> 
+ Number of photos: ${product.numberOfImages} <br/>
+ Tags: ${product.tags} <br/> <br/>
  
  [ <a href="/admin/products">lista</a> ] [ <a href="/admin/product">novo</a> ] [ <a href="/admin/product/${product.id}/edit">editar</a> ] [ <a href="/admin/product/${product.id}/delete">excluir</a> ] 
 

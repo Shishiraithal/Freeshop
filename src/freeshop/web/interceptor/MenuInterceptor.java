@@ -2,8 +2,11 @@ package freeshop.web.interceptor;
 
 import java.util.List;
 
+import freeshop.model.Content;
 import freeshop.model.ProductGroup;
+import freeshop.service.AdminService;
 import freeshop.service.ShopService;
+import freeshop.web.controller.ContentController;
 import freeshop.web.controller.ShopController;
 
 import br.com.caelum.vraptor.InterceptionException;
@@ -20,15 +23,18 @@ public class MenuInterceptor implements Interceptor {
 
 	private Result result;
 	private ShopService service;
+	private AdminService adminService;
 	
-	public MenuInterceptor(Result result, ShopService service) {
+	public MenuInterceptor(Result result, ShopService service, AdminService adminService) {
 		this.result = result;
 		this.service = service;
+		this.adminService = adminService;
 	}
 
 	@Override
 	public boolean accepts(ResourceMethod method) {
-		if( method.getResource().getType() == ShopController.class ) {
+		if( method.getResource().getType() == ShopController.class ||
+				method.getResource().getType() == ContentController.class ) {
 			return true;
 		}
 		return false;
@@ -38,8 +44,11 @@ public class MenuInterceptor implements Interceptor {
 	public void intercept(InterceptorStack stack, ResourceMethod method,
 			Object resourceInstance) throws InterceptionException {
 		
+		List<Content> items = adminService.findAllContents();
+		result.include("MenuItems", items);
+		
 		List<ProductGroup> groups = service.listProductGroups();
-		result.include("MenuGroups", groups);
+		result.include("MenuProdGroups", groups);
 
 		stack.next(method, resourceInstance);
 	}

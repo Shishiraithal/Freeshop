@@ -38,7 +38,7 @@ h3 {
 	margin-top: 1px;
 	width: 760px;
 	height: 36px;
-	background-image: url(../img/menu_back.gif);
+	background-image: url(/img/menu_back.gif);
 }
 
 #menu ul {
@@ -74,7 +74,7 @@ h3 {
 }
 
 #menu li a:hover {
-	background-image: url(../img/menu_back_over.gif);
+	background-image: url(/img/menu_back_over.gif);
 	background-repeat: repeat-x;
 	color: #000; 
 	border-color: #000;
@@ -84,7 +84,7 @@ h3 {
 #content {
 	margin: auto;
 	width: 760px;
-	background-image: url(../img/back.gif);
+	background-image: url(/img/back.gif);
 }
 
 #footer {
@@ -208,67 +208,6 @@ h3 {
 	background-color: #3381BD;
 }
 
-/*
- ** Feito com DIVs
-
-.infobox {
-	position: relative;
-	padding-left: 155px;
-	height: 120px;
-	border: none;
-}
- 
-#infobox1 {
-	background-color: #91C134;
-	background-image: url(../img/photo1.jpg);
-	background-repeat: no-repeat;
-}
-
-#infobox2 {
-	background-color: #FAD65D;
-	background-image: url(../img/photo2.jpg);
-	background-repeat: no-repeat;
-}
-
-#infobox3 {
-	background-color: #3381BD;
-	background-image: url(../img/photo3.jpg);
-	background-repeat: no-repeat;
-}
-*/
-
-
-/*
-#infobox {
-	display: inline;
-}
-
-#infobox h3 {
-	font-size: 16px;
-	font-weight: bold;
-}
-
-#infobox h4 {
-	font-size: 16px;
-	font-weight: bold;
-	display: inline;
-}
-
-#infobox hr {
-	border-top: 1px dashed #000000;
-	border-bottom: none;
-	height: 1px;
-}
-
-.infobox legend {
-	font: bold 16px Arial;
-	margin-top: 22px;
-	_margin: 10px 0px;
-	width: 280px;
-	border-bottom: 1px dashed #000000;
-}
-*/
-
 #shop_menu {
 	width: 150px;
 	min-height: 700px;
@@ -296,7 +235,7 @@ h3 {
 
 #shop_menu a:hover {
 	background-color: #FAD65D;
-	background: url(../img/menu_shop_title_back_blue.gif);
+	background: url(/img/menu_shop_title_back_blue.gif);
 	border-top: 1px dashed black;
 	border-bottom: 1px dashed black;
 	color: #FFFFFF;
@@ -307,7 +246,7 @@ h3 {
 	color: #000000;
 	width: 150px;
 	text-align: center;
-	background: url(../img/menu_shop_title_back.gif);
+	background: url(/img/menu_shop_title_back.gif);
 	line-height: 28px;
 }
 
@@ -356,14 +295,14 @@ h3 {
 }
 
 .shop_cart_table_total {
-	background: url(../img/menu_shop_title_back.gif);
+	background: url(/img/menu_shop_title_back.gif);
 	text-align: right;
 	color: white;
 	font-weight: bold;
 }
 
 .shop_cart_table_cep {
-	background: url(../img/menu_back.gif);
+	background: url(/img/menu_back.gif);
 	text-align: right;
 	color: white;
 	font-weight: bold;
@@ -390,7 +329,7 @@ h3 {
 }
 
 #shop_cart_table th {
-	background: url(../img/menu_shop_title_back_blue.gif);
+	background: url(/img/menu_shop_title_back_blue.gif);
 	color: white;
 	font-weight: bold;
 	padding: 3px;
@@ -546,38 +485,6 @@ h3 {
 	color: #000000;
 }
 
-/*
- ** feito com DIV **
- 
-.prod_oferta {
-	width: 140px;
-	text-align: center;
-	display: table-cell;
-	_display: inline;
-	padding: 2px;
-	margin: 2px;
-}
-
-.prod_oferta a {
-	font: 12px Arial, Verdana;
-	text-decoration: none;
-	color: #000000;
-}
-
-.prod_oferta a:hover {
-	color: #000000;
-	text-decoration: underline;
-}
-
-.prod_oferta a:link {
-	color: #000000;
-}
-
-.prod_oferta a:visited {
-	color: #000000;
-}
-*/
-
 .oferta_nome {
 	font-weight: bold;
 }
@@ -615,7 +522,7 @@ h3 {
 	color: #000000;
 }
 
-#breadcrumb a:hover{
+#breadcrumb a:hover {
 	text-decoration: underline;
 	font-weight: bold;
 }
@@ -631,4 +538,79 @@ h3 {
 	margin-left: 6px;
 	margin-right: 6px;
 	text-align: left;
+}
+
+#error_mesages {
+	color: red;
+	font-weight: bold;
+}
+
+.sing_in_on_area {
+	font: 12px Arial, Verdana;
+	color: white;
+	text-align: center;
+	background: url(/img/menu_shop_title_back.gif);
+	line-height: 20px;
+}
+
+.sing_in_on_area a {
+	text-decoration: none;
+	color: white;
+}
+
+.sing_in_on_area a:active {
+	text-decoration: none;
+	color: white;
+}
+
+.sing_in_on_area a:visited {
+	text-decoration: none;
+	color: white;
+}
+
+.sing_in_on_area a:hover {
+	text-decoration: underline;
+	color: white;
+}
+
+#shop_register {
+	padding: 5px;
+	text-align: center;
+}
+
+#shop_register h3 {
+	font: 18px Verdana, Arial;
+	font-weight: bold;
+	color: #3381BD;
+	margin: 0px;
+	border-bottom: 1px dashed;
+}
+
+.divRegister {
+	border: 1px solid black;
+	width: 350px;
+}
+
+.divRegister h4 {
+	background-color: red;
+	background-image: url(/img/menu_back_red.gif);
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 28px;
+}
+
+#div_content {
+	padding: 5px;
+	text-align: left;
+	font: 16px Verdana, Arial;
+}
+
+#div_content h3 {
+	font: 18px Verdana, Arial;
+	font-weight: bold;
+	color: #3381BD;
+	margin: 0px;
+	border-bottom: 1px dashed;
 }

@@ -5,12 +5,12 @@
 
 <jsp:include page="/WEB-INF/jsp/admin/inc/top.jsp" />
 
-<h2>Cadastro de Categorias de Produtos</h2>
+<h2><fmt:message key="title.admin.categories" /></h2>
 
-[ <a href="/admin/group">NOVO</a> ] <br/>
+[ <a href="/admin/group"><fmt:message key="lbl.new" /></a> ] <br/>
 
 <table>
-<tr><th>ID</th><th>Nome</th></tr>
+<tr><th><fmt:message key="lbl.id" /></th><th><fmt:message key="lbl.name" /></th></tr>
 <c:forEach items="${list}" var="group" varStatus="st">
 <tr><td>${group.id}</td><td><a href="/admin/group/${group.id}">${group.name}</a></td></tr>
 </c:forEach>
